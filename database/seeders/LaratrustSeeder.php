@@ -13,7 +13,7 @@ class LaratrustSeeder extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void
+     * @return false
      */
     public function run()
     {
@@ -49,7 +49,7 @@ class LaratrustSeeder extends Seeder
                     $permissionValue = $mapPermission->get($perm);
 
                     $permissions[] = \App\Models\Permission::firstOrCreate([
-                        'name' => $module . '-' . $permissionValue,
+                        'name' => $permissionValue . '_' . $module ,
                         'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
                         'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),
                     ])->id;

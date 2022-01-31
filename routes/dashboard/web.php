@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\DashboardController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 Route::group(
